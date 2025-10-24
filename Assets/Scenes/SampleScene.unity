@@ -1593,6 +1593,7 @@ GameObject:
   - component: {fileID: 400534893}
   - component: {fileID: 400534892}
   - component: {fileID: 400534891}
+  - component: {fileID: 400534895}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1827,6 +1828,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.745171, y: 0.9919895}
   m_EdgeRadius: 0
+--- !u!114 &400534895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400534887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 139a435b3457dfb46b76ffe26fe904a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Flipper
+  _isFacingRight: 1
 --- !u!1 &404890825
 GameObject:
   m_ObjectHideFlags: 0
@@ -2486,10 +2500,12 @@ GameObject:
   - component: {fileID: 949130307}
   - component: {fileID: 949130311}
   - component: {fileID: 949130308}
+  - component: {fileID: 949130317}
   - component: {fileID: 949130312}
   - component: {fileID: 949130314}
   - component: {fileID: 949130313}
-  - component: {fileID: 949130315}
+  - component: {fileID: 949130316}
+  - component: {fileID: 949130318}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2707,7 +2723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimation
   _animator: {fileID: 949130307}
---- !u!114 &949130315
+--- !u!114 &949130316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2716,9 +2732,119 @@ MonoBehaviour:
   m_GameObject: {fileID: 949130306}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aef84cc9c6b0d94aa9fea3c920191a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 66cd6ebcbb8f3f54b9a05adfa34b9067, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerSpriteFlipper
+  m_EditorClassIdentifier: Assembly-CSharp::CrystalCollector
+--- !u!82 &949130317
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949130306}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: bf85897ab8f7cf346afd6a9c1773c0fb, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &949130318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949130306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 139a435b3457dfb46b76ffe26fe904a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Flipper
+  _isFacingRight: 1
 --- !u!1 &1358346446
 GameObject:
   m_ObjectHideFlags: 0
